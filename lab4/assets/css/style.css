@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    background-color: #eeeeee;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-item {
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-item img {
+    border: 10px solid #fff;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.grid:has(.grid-item:hover) .grid-item:not(:hover) {
+    transform: scale(0.9);
+    filter: brightness(0.8);
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
